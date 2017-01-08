@@ -1,0 +1,66 @@
+{
+    "project_logo": "https://assets1.heek.com/images/ressources/heek-logo.svg",
+    "project_favicon": "favicon.png",
+    "project_name": "Heek",
+    "project_url": "https://www.heek.com",
+    "copyright_start_year": "2016",
+    "client_name": null,
+    "client_url": null,
+    "creators": [
+        {
+            "name": "Heek",
+            "url": null
+        }
+    ],
+    "theme": {
+        "border_color": "#E0E6ED",
+        "highlight_color": "#F9FAFC",
+        "brand_color": "#00585C",
+        "background_color": "#FFFFFF",
+        "code_highlight_theme": "github",
+        "override_code_highlight_bg": "#F9FAFC",
+        "sample_dark_background": "#333333",
+        "show_project_name": true,
+        "show_version": true,
+        "max_width": null,
+        "titles": {
+            "library_title": "Pattern Library",
+            "pages_title": "Overview",
+            "components_title": "Components"
+        }
+    },
+    "assets": {
+        "css": [],
+        "js": []
+    },
+    "font_libraries": {
+        "typekit_code": null,
+        "typography_web_fonts": null,
+        "google_web_fonts": null
+    },
+    "content": {
+        "show_first_page_on_load": true,
+        "title": "Overview",
+        "pages": [
+            {
+                "name": "introduction",
+                "title": "Introduction",
+                "file": "./pages/intro.md"
+            }
+        ]
+    },
+    "groups": [
+        {
+            "name": "colors",
+            "title": "Colors",
+            "components": [
+                {
+                    "group": "colors",
+                    "name": "default",
+                    "title": "Default Colors"
+                }
+            ]
+        }
+    ],
+    "version": "1.9.3"
+}
