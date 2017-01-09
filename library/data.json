@@ -24,7 +24,7 @@
         "show_version": true,
         "max_width": null,
         "titles": {
-            "library_title": "Pattern Library",
+            "library_title": "Styleguide",
             "pages_title": "Overview",
             "components_title": "Components"
         }
