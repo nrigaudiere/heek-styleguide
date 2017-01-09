@@ -2,6 +2,22 @@
  * Base styles
  * ----------------------------------------//
  */
+
+@font-face {
+    font-family: 'Proxima';
+    src:
+      url("../../assets/fonts/proxima/ProximaNovaSoftMedium.eot") format("embedded-opentype"),
+      url("../../assets/fonts/proxima/ProximaNovaSoftMedium.eot?#iefix") format("embedded-opentype"),
+      url("../../assets/fonts/proxima/ProximaNovaSoftMedium.otf") format("opentype"),
+      url("../../assets/fonts/proxima/ProximaNovaSoftMedium.ttf") format("truetype"),
+      url("../../assets/fonts/proxima/ProximaNovaSoftMedium.woff") format("woff"),
+      url("../../assets/fonts/proxima/ProximaNovaSoftMedium.woff2") format("woff2")
+}
+
+body {
+  font-family: 'Proxima';
+}
+
 .ndpl-body {
     background-color: #FFF;
     -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -34,7 +50,7 @@
 .ndpl-page,
 .ndpl-nav__title,
 .ndpl-sidebar__title {
-    font-family: 'Open Sans', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
+    font-family: 'Proxima', 'Trebuchet MS', Tahoma, sans-serif;
 }
 
 /* Heading type sizes */

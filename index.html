@@ -1,60 +1,59 @@
 <!DOCTYPE html>
 <html lang="en" class="ndpl-c-background">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
 
-        <title v-text="project_name ? project_name + ' | Pattern Library' : 'Pattern Library'"></title>
+    <title v-text="project_name ? project_name + ' | Styleguide' : 'Styleguide'"></title>
 
-        <!-- Astrum (https://github.com/NoDivide/astrum) -->
-        <meta name="application-name" content="Astrum {{ version }}" />
+    <!-- Astrum (https://github.com/NoDivide/astrum) -->
+    <meta name="application-name" content="Astrum {{ version }}" />
 
-        <!-- Favicon -->
-        <link rel="shortcut icon" type="image/png" :href="project_favicon" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" :href="project_favicon" />
 
-        <!-- Pattern Library Stylesheets: DO NOT CHANGE -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css">
-        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
-        <script>
-            WebFont.load({
-                google: {
-                    families: ['Open Sans']
-                }
-            });
-        </script>
-        <style>
-            /* Targeted theme styles */
-            .ndpl-folding-cube .ndpl-cube:before { background-color: {{ theme.brand_color }} !important; }
-            .ndpl-component__sample--inverted    { background-color: {{ theme.sample_dark_background }} !important }
-            .ndpl-c-background                   { background-color: {{ theme.background_color }} !important; }
-            .ndpl-c-border                       { border-color: {{ theme.border_color }} !important; }
-            .ndpl-c-border-b                     { border-bottom-color: {{ theme.border_color }} !important; }
-            .ndpl-c-highlight                    { background-color: {{ theme.highlight_color }} !important; }
-            .ndpl-c-highlight-ca a.active,
-            .ndpl-c-highlight-ca a:hover         { background-color: {{ theme.highlight_color }} !important; }
-            .ndpl-c-brand-c                      { color: {{ theme.brand_color }} !important; }
-            .ndpl-c-brand-bg                     { background-color: {{ theme.brand_color }} !important; }
-            .ndpl-c-brand-b                      { border-color: {{ theme.brand_color }} !important; }
-            .ndpl-c-brand-bl-ca a.active,
-            .ndpl-c-brand-bl-ca a:hover          { border-left-color: {{ theme.brand_color }} !important; }
-            .ndpl-c-brand-a:hover                { color: {{ theme.brand_color }} !important; }
-            .ndpl-c-brand-ca a:hover             { color: {{ theme.brand_color }} !important; }
-            .ndpl-c-brand-cai a                  { color: {{ theme.brand_color }} !important; }
-        </style>
-        <link rel="stylesheet" v-if="theme.code_highlight_theme" :href="'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/' + theme.code_highlight_theme + '.min.css'">
-        <style v-if="theme.override_code_highlight_bg">.hljs { background: {{ theme.highlight_color }}} !important; }</style>
-        <link rel="stylesheet" href="app/css/styles.min.css">
+    <!-- Styleguide Stylesheets: DO NOT CHANGE -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Open Sans']
+            }
+        });
+    </script>
+    <style>
+      /* Targeted theme styles */
+      .ndpl-folding-cube .ndpl-cube:before { background-color: {{ theme.brand_color }} !important; }
+      .ndpl-component__sample--inverted    { background-color: {{ theme.sample_dark_background }} !important }
+      .ndpl-c-background                   { background-color: {{ theme.background_color }} !important; }
+      .ndpl-c-border                       { border-color: {{ theme.border_color }} !important; }
+      .ndpl-c-border-b                     { border-bottom-color: {{ theme.border_color }} !important; }
+      .ndpl-c-highlight                    { background-color: {{ theme.highlight_color }} !important; }
+      .ndpl-c-highlight-ca a.active,
+      .ndpl-c-highlight-ca a:hover         { background-color: {{ theme.highlight_color }} !important; }
+      .ndpl-c-brand-c                      { color: {{ theme.brand_color }} !important; }
+      .ndpl-c-brand-bg                     { background-color: {{ theme.brand_color }} !important; }
+      .ndpl-c-brand-b                      { border-color: {{ theme.brand_color }} !important; }
+      .ndpl-c-brand-bl-ca a.active,
+      .ndpl-c-brand-bl-ca a:hover          { border-left-color: {{ theme.brand_color }} !important; }
+      .ndpl-c-brand-a:hover                { color: {{ theme.brand_color }} !important; }
+      .ndpl-c-brand-ca a:hover             { color: {{ theme.brand_color }} !important; }
+      .ndpl-c-brand-cai a                  { color: {{ theme.brand_color }} !important; }
+    </style>
+    <link rel="stylesheet" v-if="theme.code_highlight_theme" :href="'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/' + theme.code_highlight_theme + '.min.css'">
+    <style v-if="theme.override_code_highlight_bg">.hljs { background: {{ theme.highlight_color }}} !important; }</style>
+    <link rel="stylesheet" href="app/css/styles.css">
 
-        <!-- Font Libraries -->
-        <link rel="stylesheet" v-if="font_libraries.google_web_fonts" :href="font_libraries.google_web_fonts">
-        <link rel="stylesheet" v-if="font_libraries.typography_web_fonts" :href="font_libraries.typography_web_fonts">
-        <ndpl-script :script="'https://use.typekit.net/' + font_libraries.typekit_code + '.js'" v-if="font_libraries.typekit_code" inline-template>
-            <script :src="script" @load="loadTypekit"></script>
-        </ndpl-script>
+    <!-- Font Libraries -->
+    <link rel="stylesheet" v-if="font_libraries.google_web_fonts" :href="font_libraries.google_web_fonts">
+    <link rel="stylesheet" v-if="font_libraries.typography_web_fonts" :href="font_libraries.typography_web_fonts">
+    <ndpl-script :script="'https://use.typekit.net/' + font_libraries.typekit_code + '.js'" v-if="font_libraries.typekit_code" inline-template>
+        <script :src="script" @load="loadTypekit"></script>
+    </ndpl-script>
 
-        <!-- Custom stylesheets are loaded from the assets.css array in data.json -->
-        <link rel="stylesheet" v-for="css in assets.css" :href="css">
-    </head>
+    <!-- Custom stylesheets are loaded from the assets.css array in data.json -->
+    <link rel="stylesheet" v-for="css in assets.css" :href="css">
+  </head>
     <body id="top"
           class="ndpl-body ndpl-c-background"
           :class="{ 'ndpl-inverted': theme.invert_text, 'ndpl-desktop': !mobile_view, 'ndpl-mobile': mobile_view, 'ndpl-disable-scrolling': sidebar_scrolling }">
@@ -67,7 +66,7 @@
             <div class="ndpl-cube3 ndpl-cube"></div>
         </div>
 
-        <h3 class="ndpl-loading__title" v-if="! loaded && !log.error.length && !log.info.length">Building pattern library...</h3>
+        <h3 class="ndpl-loading__title" v-if="! loaded && !log.error.length && !log.info.length">Loading Styleguide...</h3>
         <h3 class="ndpl-loading__title" v-if="log.error.length">Hold up! We have some errors...</h3>
         <h3 class="ndpl-loading__title" v-if="log.info.length && !log.error.length">Looks like you have some setup to do...</h3>
 
@@ -185,7 +184,7 @@
                         &copy; {{ copyright_year }} {{{ client }}}.
                     </template>
                     <template v-if="all_creators">
-                        <br/>Pattern library created by {{{ all_creators }}}.
+                        <br/>Styleguide created by {{{ all_creators }}}.
                     </template>
                 </p>
 
