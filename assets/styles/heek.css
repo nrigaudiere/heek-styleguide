@@ -1,0 +1,21 @@
+body {
+  font-family: "Proxima",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+	color: #313E51;
+}
+
+button {
+	outline: 0;
+}
+
+.login-cta {
+  padding: 0.5em 0.2em;
+  border-radius: 3px;
+  background-color: transparent;
+  color: #62BECA;
+  border: 2px solid #62BECA;
+  width: 100%;
+  transition: border-color 0.2s, color 0.2s ease-in-out;
+}
+

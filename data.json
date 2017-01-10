@@ -1,5 +1,5 @@
 {
-    "project_logo": "https://assets1.heek.com/images/ressources/heek-logo.svg",
+    "project_logo": "assets/logos/heek-logo.svg",
     "project_favicon": "favicon.png",
     "project_name": "Heek",
     "project_url": "https://www.heek.com",
@@ -30,7 +30,7 @@
         }
     },
     "assets": {
-        "css": [],
+        "css": ["assets/styles/heek.css"],
         "js": []
     },
     "font_libraries": {
@@ -51,13 +51,43 @@
     },
     "groups": [
         {
-            "name": "colors",
-            "title": "Colors",
+            "name": "branding",
+            "title": "Branding",
             "components": [
                 {
-                    "group": "colors",
-                    "name": "default",
-                    "title": "Default Colors"
+                    "group": "branding",
+                    "name": "colors",
+                    "title": "Colors",
+                    "type": "colors",
+                    "colors": [
+                        "#F3306B",
+                        "#62BECA",
+                        "#313E51",
+                        "#E2F7FF",
+                        "#58AEFF"
+                    ]
+                },
+                {
+                    "group": "branding",
+                    "name": "logos",
+                    "title": "Logos",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "buttons",
+            "title": "Buttons",
+            "components": [
+                {
+                    "group": "buttons",
+                    "name": "static",
+                    "title": "Static",
+										"options": {
+											"max_width": "5rem"
+										}
                 }
             ]
         }
